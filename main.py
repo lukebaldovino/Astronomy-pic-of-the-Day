@@ -1,10 +1,10 @@
 import streamlit as st
 import requests
 from datetime import datetime
-import creds
 
-URL = f"https://api.nasa.gov/planetary/apod?api_key={creds.API_KEY}"
-params = {"api_key": creds.API_KEY}
+API_KEY = st.secrets["API_KEY"]
+URL = f"https://api.nasa.gov/planetary/apod?api_key={API_KEY}"
+params = {"api_key": API_KEY}
 
 st.title("🌌Astronomy Pic of the Day!🌌")
 
@@ -25,4 +25,6 @@ st.markdown(
 )
 
 st.markdown('<p><small>made by <a href="https://github.com/lukebaldovino"> me💗 </a></small)</p>', unsafe_allow_html=True)
+
+
 
