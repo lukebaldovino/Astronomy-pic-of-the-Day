@@ -4,7 +4,7 @@ from datetime import datetime
 import creds
 
 URL = f"https://api.nasa.gov/planetary/apod?api_key={creds.API_KEY}"
-params = {"api_key": API_KEY}
+params = {"api_key": creds.API_KEY}
 
 st.title("🌌Astronomy Pic of the Day!🌌")
 
